@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test</title>
+  </head>
+  <body>
+    <script src="removeItem.js"></script>
+    <script>
+
+      function dotCalculator(equation) {
+        
+        let values = equation.split(" ");
+        let v1 = values[0], o = values[1], v2 = values[2];
+
+        let length = o == '+' 
+        ? v1.length + v2.length 
+        : o == '-' 
+        ? v1.length - v2.length
+        : o == '*'
+        ? v1.length * v2.length
+        : o == '//'
+        ? Math.trunc(v1.length / v2.length)
+        : 0;
+        
+        if (length == 0) return '';
+        return '.'.repeat(length);
+      };
+
+
+      dotCalculator("..... + ...............");
+      dotCalculator("..... - ...");
+      dotCalculator("..... - .");
+      dotCalculator("..... * ...");
+      dotCalculator("..... // ..");
+      dotCalculator("..... // .");
+      dotCalculator(". // .");
+      dotCalculator(".. - ..");
+
+      /*
+
+      * "..... + ..............." => "...................."
+      * "..... - ..."             => ".."
+      * "..... - ."               => "...."
+      * "..... * ..."             => "..............."
+      * "..... * .."              => ".........."
+      * "..... // .."             => ".."
+      * "..... // ."              => "....."
+      * ". // .."                 => ""
+      * ".. - .."                 => ""
+
+      */
+    </script>
+  </body>
+</html>
