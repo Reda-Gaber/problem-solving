@@ -1,5 +1,4 @@
 /*
-
 Given a credit card number we can determine who 
 the issuer/vendor is with a few basic knowns.
 
@@ -16,7 +15,6 @@ Complete the function getIssuer() that will use the values
 | VISA       | 4                    | 13 or 16      |
 |---------------------------------------------------|
 
-
 Examples
 getIssuer(4111111111111111) == "VISA"
 getIssuer(4111111111111) == "VISA"
@@ -27,7 +25,6 @@ getIssuer(5105105105105100) == "Mastercard"
 getIssuer(5105105105105106) == "Mastercard"
 getIssuer(9111111111111111) == "Unknown"
 */
-
 
 function getIssuer(number) {
 
